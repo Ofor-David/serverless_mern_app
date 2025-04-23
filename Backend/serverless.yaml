@@ -1,0 +1,27 @@
+service: express-backend-lambda
+
+provider:
+  name: aws
+  runtime: nodejs22.x
+  region: us-east-1
+  environment:
+    JWT_SECRET: secret93738 #replace with your own secret
+    mongodb_url: mongodb+srv://xxxx #replace with your own mongodb connection string
+
+functions:
+  api:
+    handler: lambda.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY
+
+plugins:
+  - serverless-offline
+
+package:
+  individually: false
+

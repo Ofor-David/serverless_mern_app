@@ -1,0 +1,29 @@
+{
+  "name": "tasksapi",
+  "version": "1.0.0",
+  "description": "A simple API for managing tasks",
+  "main": "lambda.js",
+  "scripts": {
+    "dev": "serverless offline",
+    "start": "serverless deploy"
+  },
+  "keywords": [],
+  "author": "Ofor David Tochukwu",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@types/node": "^22.13.5",
+    "@vendia/serverless-express": "^4.12.6",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-async-handler": "^1.2.0",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.10.1",
+    "serverless-esbuild": "^1.55.0",
+    "serverless-http": "^3.2.0",
+    "serverless-offline": "^14.4.0"
+  }
+}
