@@ -1,6 +1,6 @@
 # Backend Setup
 
-This contains information on the backend setup for this project. It is built using modern serverless architecture principles and is designed to be scalable, efficient, and easy to deploy.
+This document outlines the backend setup for this project. It follows modern serverless architecture principles and is designed to be scalable, efficient, and easy to deploy.
 
 ## Features
 - **Serverless Architecture**: Built using AWS Lambda and API Gateway.
@@ -10,10 +10,10 @@ This contains information on the backend setup for this project. It is built usi
 
 
 ## Prerequisites
-- Node.js (v18 or later)
-- AWS CLI (v2 or later)
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)(v2 or later)
 - An AWS account with permissions to deploy serverless applications
-- MongoDB cluster
+- [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database)
 
 ## Setup Instructions
 
@@ -30,27 +30,32 @@ This contains information on the backend setup for this project. It is built usi
     ```bash
     serverless login
     ```
+4. **Configure environment variables**
+    Make sure to modify the environment variables in the serverlesss.yaml file.
 
 ## Development Server
 
-To start the development server, run:
+To start the development server locally, run:
 ```bash
 npm run dev
 ```
-your backend is deployed locally and you can call it using the url provided to you.
+Your backend will be deployed locally, and a local endpoint will be provided for testing.
 
 ## Build for Production
 
-Deploys your project to aws lambda, configures API gateway and launches an s3 bucket on aws
+To deploy your project to AWS (Lambda, API Gateway, and S3), run:
 ```bash
 npm start
 ```
-The Backend infrastructure is complete from here and you can now call your backend using the endpoint url provided to you after running `npm start`.
+After successful deployment, your backend will be accessible via the endpoint URL provided in the terminal output.
 
 ## Frontend Integration
-- Take your url provided after deploying the api and plug it into the **API_URL** field in the frontend located at `/Frontend/src/tasksapp.tsx`
+- Copy the API endpoint URL returned after backend deployment.
+
+- Open `/Frontend/src/taskapp.tsx` and replace the *API_URL* constant with your deployed backend URL.
 
 - Now run `npm run build` in the `/Frontend` directory to build the new frontend code.
+
 - Upload the new contents of the `dist/` folder to your s3 bucket.
 
 ## API Endpoints

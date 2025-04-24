@@ -7,7 +7,7 @@ provider:
   environment:
     JWT_SECRET: secret93738 #replace with your own secret
     mongodb_url: mongodb+srv://xxxx #replace with your own mongodb connection string
-
+    frontend_url: https://xxxxxxxxxxxxxx.cloudfront.net #replace with your own cloudfront url
 functions:
   api:
     handler: lambda.handler

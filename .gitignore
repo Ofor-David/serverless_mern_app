@@ -13,3 +13,6 @@ dist-ssr
 
 # Terraform
 *.tfstate
+.terraform/
+.terraform*
+*.tfstate.*

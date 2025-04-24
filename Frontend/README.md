@@ -32,10 +32,32 @@ npm run build
 ```
 The production-ready files will be in the `dist/` directory.
 
-## Folder Structure
+## Deploy frontend on AWS using IaC
 
-- `src/`: Contains the source code.
-- `dist/`: Contains the production build (generated after running `npm run build`).
+To deploy the frontend on AWS using Infrastructure as Code (IaC), follow these steps:
+
+### Prerequisites:
+- Ensure the AWS CLI is installed and configured with the appropriate credentials:
+    ```bash
+    aws configure
+    ```
+- Ensure Terraform is installed, check out the [Installation guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+
+
+1. Navigate to the `Terraform/` directory:
+```bash
+cd Terraform
+```
+2. Preview the infrastructure changes:
+```bash
+terraform plan
+```
+3. To deploy the infrastructure to aws, run:
+```bash
+terraform apply --auto-approve
+```
+4. Log in to your AWS Management Console, navigate to the S3 bucket you just provisioned, click *Upload*, then drag and drop all contents inside the `dist/` folder. Click *Upload* to confirm.
+5. Navigate to your CloudFront distribution dashboard, Copy the distribution domain name and plug it in the *frontend_url* field in the **serverless.yaml** file located at `/Backend/serverless.yaml`
 
 ## Contributing
 

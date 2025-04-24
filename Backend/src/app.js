@@ -22,7 +22,7 @@ app.use(urlencoded({ extended: false }))
 app.use(logger)
 
 const corsOptions = {
-    origin: 'https://xxxxxxxxxxxxx.cloudfront.net',  // Replace with your cloudfront/frontend URL
+    origin: process.env.frontend_url,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Specify allowed methods
     credentials: true,  // Allow credentials (e.g., cookies, authorization headers)
 };
