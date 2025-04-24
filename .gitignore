@@ -13,4 +13,3 @@ dist-ssr
 
 # Terraform
 *.tfstate
-*.tfvars
