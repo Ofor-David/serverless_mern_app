@@ -59,6 +59,13 @@ terraform apply --auto-approve
 4. Log in to your AWS Management Console, navigate to the S3 bucket you just provisioned, click *Upload*, then drag and drop all contents inside the `dist/` folder. Click *Upload* to confirm.
 5. Navigate to your CloudFront distribution dashboard, Copy the distribution domain name and plug it in the *frontend_url* field in the **serverless.yaml** file located at `/Backend/serverless.yaml`
 
+## Cost saving
+⚠ Ensure to destroy your unused aws infrastructure!! 
+run:
+```bash
+terraform destroy
+```
+
 ## Contributing
 
 Feel free to submit issues or pull requests to improve the frontend.
