@@ -12,6 +12,10 @@ This serverless mern app is a simple task management application designed to hel
 - Add, edit, and delete tasks.
 - Responsive and user-friendly interface.
 
+
+## Infrastructure as Code (IaC) with Terraform
+
+This project leverages Terraform to provision and manage AWS resources, ensuring consistent and repeatable infrastructure deployments.
 ## Get Started
 
 1. Clone the repository:
