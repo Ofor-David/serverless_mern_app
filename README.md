@@ -22,7 +22,7 @@ This serverless mern app is a simple task management application designed to hel
     ```bash
     cd serverless_mern_app
     ```
-3. Follow directives in subfolders to setup the backend and the frontend
+3. Follow directives in subfolders to setup the backend and the frontend.
 
 ## Contact
 
